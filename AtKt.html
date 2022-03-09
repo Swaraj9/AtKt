@@ -24,14 +24,26 @@
         }
     </style>
     <script>
-        let sem_one
-        let sem_two
-        if(console.log(document.getElementById("year").value) = "SY"){
-            sem_one="3"
-            sem_two="4"
+        const onYearChange = () => {
+            const selectedYear = document.getElementById("year").value;
+            if(selectedYear === "FY"){
+                document.getElementById("1").innerHTML = "Sem 1";
+                document.getElementById("2").innerHTML = "Sem 2";
+                document.getElementById("1").value = "1";
+                document.getElementById("2").value = "2";
+            }else if(selectedYear === "SY"){
+                document.getElementById("1").innerHTML = "Sem 3";
+                document.getElementById("2").innerHTML = "Sem 4";
+                document.getElementById("1").value = "3";
+                document.getElementById("2").value = "4";
+            }else if(selectedYear === "TY"){
+                document.getElementById("1").innerHTML = "Sem 5";
+                document.getElementById("2").innerHTML = "Sem 6";
+                document.getElementById("1").value = "5";
+                document.getElementById("2").value = "6";
+            }
+
         }
-        document.getElementById("sem").options[1].innerhtml = sem_one
-        document.getElementById("sem").options[2].value = sem_two
     </script>
     <table class="table">
         <tbody>
@@ -40,7 +52,7 @@
                 Class
             </td>
             <td>
-                <select id="year">
+                <select id="year" onchange = "onYearChange()">
                     <option value="FY">FY</option>
                     <option value="SY">SY</option>
                     <option value="TY">TY</option>
@@ -53,8 +65,8 @@
             </td>
             <td>
                 <select id="sem" name="sem">
-                    <option id="1" value="1"></option>
-                    <option id="2" value="2"></option>
+                    <option id="1" value="1">Sem 1</option>
+                    <option id="2" value="2">Sem 2</option>
                 </select>
             </td>
         </tr>
