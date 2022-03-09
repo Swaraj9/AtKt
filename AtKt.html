@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .body{
+            margin: 0 auto;
+        }
+        .table{
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
+        .submit{
+            width: auto;
+            display: block;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let sem_one
+        let sem_two
+        if(console.log(document.getElementById("year").value) = "SY"){
+            sem_one="3"
+            sem_two="4"
+        }
+        document.getElementById("sem").options[1].innerhtml = sem_one
+        document.getElementById("sem").options[2].value = sem_two
+    </script>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>
+                Class
+            </td>
+            <td>
+                <select id="year">
+                    <option value="FY">FY</option>
+                    <option value="SY">SY</option>
+                    <option value="TY">TY</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Semester
+            </td>
+            <td>
+                <select id="sem" name="sem">
+                    <option id="1" value="1"></option>
+                    <option id="2" value="2"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Month_year
+            </td>
+            <td>
+                <select id="month_year" name="month_year">
+                    <option value="Oct_21">Oct_21</option>
+                    <option value="Nov_21">Nov_21</option>
+                    <option value="Dec_21">Dec_21</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="submit">Submit</button> 
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
